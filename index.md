@@ -13,10 +13,10 @@ mqy,from Anhui,China,is now studying in College of Engineering,Peking University
 > 
 ### Small image
 
-![Octocat]([])
+[![lillie](https://s1.ax1x.com/2023/06/23/pCYbYSs.png)](https://imgse.com/i/pCYbYSs)
+
 
 ### Large image
-[![lillie](https://s1.ax1x.com/2023/06/23/pCYbYSs.png)](https://imgse.com/i/pCYbYSs)
 
 
 
