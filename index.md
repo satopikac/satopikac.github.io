@@ -28,14 +28,4 @@ mqy,from Anhui,China,is now studying in College of Engineering,Peking University
 <dd>2005</dd>
 <dt>Birthplace</dt>
 <dd>Anhui</dd>
-<dt>Color</dt>
-<dd>Green</dd>
 </dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
