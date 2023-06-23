@@ -11,7 +11,7 @@ mqy,from Anhui,China,is now studying in College of Engineering,Peking University
 >
 > 世上无难事，只要肯登攀
 > 
-### Small image
+### 头像（误） 鼠鼠我阿，最喜欢二刺螈力!
 
 [![lillie](https://s1.ax1x.com/2023/06/23/pCYbYSs.png)](https://imgse.com/i/pCYbYSs)
 
@@ -23,11 +23,11 @@ mqy,from Anhui,China,is now studying in College of Engineering,Peking University
 
 <dl>
 <dt>Name</dt>
-<dd>Godzilla</dd>
+<dd>mqy</dd>
 <dt>Born</dt>
-<dd>1952</dd>
+<dd>2005</dd>
 <dt>Birthplace</dt>
-<dd>Japan</dd>
+<dd>Anhui</dd>
 <dt>Color</dt>
 <dd>Green</dd>
 </dl>
