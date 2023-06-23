@@ -20,7 +20,7 @@ mqy,from Anhui,China,is now studying in College of Engineering,Peking University
 ![Branching](https://guides.github.com/activities/hello-world/branching.png)
 
 
-### Definition lists can bhttps://github.com/satopikac/satopikac.github.io/blob/main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-23%20183418.pnge used with HTML syntax.
+
 
 <dl>
 <dt>Name</dt>
