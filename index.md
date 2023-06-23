@@ -1,6 +1,6 @@
 # 欢迎你来到satopikac的主页！
+欢迎来到这里，不知道你是如何的得到这个网址的，不过既然来了，那就不妨了解一下我的信息吧！
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
 
 ## Header 2
 
