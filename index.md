@@ -1,9 +1,9 @@
 # 欢迎你来到satopikac的主页！
-欢迎来到这里，不知道你是如何的得到这个网址的，不过既然来了，那就不妨了解一下我的信息吧！
+欢迎来到这个网站，本网站是一个个人主页，暂时不含重要内容
 
 
 ## 个人信息
-mqy，来自中国安徽省，现正于北京大学工学院就读，邮箱satopikac@gmail.com
+梅庆宇，来自中国安徽省，现正于北京大学工学院就读，邮箱satopikac@gmail.com
 
 mqy,from Anhui,China,is now studying in College of Engineering,Peking University
 
@@ -11,9 +11,6 @@ mqy,from Anhui,China,is now studying in College of Engineering,Peking University
 >
 > 世上无难事，只要肯登攀
 > 
-### 头像（误） 鼠鼠我阿，最喜欢二刺螈力!
-
-[![lillie](https://s1.ax1x.com/2023/06/23/pCYbYSs.png)](https://imgse.com/i/pCYbYSs)
 
 
 ### Large image
