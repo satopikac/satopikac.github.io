@@ -63,6 +63,7 @@ disqus: # fromendworld
 
 # Gitalk
 gitalk:
+  enable:true
   clientID: Ov23liPQVeewTaA0SZxC
   clientSecret: ae5d268f20226cc74395b989c735724777940a2f
   repo: satopikac.github.io
