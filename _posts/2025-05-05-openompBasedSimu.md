@@ -100,7 +100,7 @@ const int sg_steps = 11;
 
 其中
 
-$\beta=\frac{1}{2}(\frac{1}{\beta}+1)$
+$\beta=\frac{1}{2}(\frac{1}{b}+1)$
 
 ### 策略更新规则
 
@@ -161,7 +161,7 @@ b,regular,scale-free
 ...
 ```
 
-表示在给定的 `b` 值下，规则网络和无标度网络中的平均合作比例。
+表示在给定的 `b` (对于SG是r)值下，规则网络和无标度网络中的平均合作比例。
 
 ---
 
@@ -178,6 +178,8 @@ g++ -std=c++17 -O3 -fopenmp parallel.cpp -o parallel
 ```bash
 ./parallel
 ```
+
+windows环境下还可使用Visual Studio打开github中CMake项目进行编译运行。
 
 ---
 
@@ -211,7 +213,6 @@ sg_results_z=8.csv
 
 - 确保编译器支持 OpenMP（如 GCC >= 9）
 - 可根据需要调整 `N`, `allgenerations`, `repeats` 等参数
-- 当前版本未考虑节点度异质性补偿机制，可进一步扩展
 
 ## 📝 源码
 
