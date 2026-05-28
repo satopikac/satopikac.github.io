@@ -1,0 +1,121 @@
+---
+import { Image } from 'astro:assets'
+import { Button, Collapse, Timeline } from 'astro-pure/user'
+import PageLayout from '@/layouts/CommonPage.astro'
+
+import aboutMe from '@/assets/about-me.png'
+import springImg from '@/assets/about-spring.jpg'
+import summerImg from '@/assets/about-summer.jpg'
+import autumnImg from '@/assets/about-autumn.jpg'
+import winterImg from '@/assets/about-winter.jpg'
+
+const headings = [
+  { depth: 2, slug: 'education', text: 'Education' },
+  { depth: 2, slug: 'research', text: 'Research Projects' },
+  { depth: 2, slug: 'awards', text: 'Academic Awards' },
+  { depth: 2, slug: 'skills', text: 'Technical Skills' },
+  { depth: 2, slug: 'interests', text: 'Research Interests' }
+]
+---
+
+<PageLayout title='CV' {headings}>
+  <div class='flex flex-col md:flex-row gap-6 items-start'>
+    <div class='flex-1'>
+      <p class='text-lg font-medium'>Mei Qingyu 梅庆宇</p>
+      <p>
+        College of Engineering, Peking University<br />
+        Robotics Engineering<br />
+        GitHub: <a href='https://github.com/satopikac' target='_blank'>satopikac</a><br />
+        Email: <a href='mailto:pkumqy@foxmail.com'>pkumqy@foxmail.com</a>
+      </p>
+      <p>
+        Research in AI + Robotics, interests including Embodied Intelligence, Robot RL, Vision-Language-Action (VLA) Models, Multimodal Fusion, and Multi-Robot Collaboration, dedicated to advancing intelligent robotics technology and applications.
+      </p>
+    </div>
+    <div class='w-48 flex-shrink-0'>
+      <Image src={aboutMe} alt='Mei Qingyu' class='rounded-lg shadow-md' />
+    </div>
+  </div>
+
+  {/* Education */}
+  <h2 id='education'>Education</h2>
+  <div class='flex flex-col md:flex-row gap-4 my-4'>
+    <div class='flex-1'>
+      <Image src={springImg} alt='Spring in PKU' class='rounded-lg shadow-sm mb-2' />
+      <p class='text-sm text-muted-foreground text-center'>Spring days in PKU</p>
+    </div>
+    <div class='flex-1'>
+      <Image src={summerImg} alt='Summer in PKU' class='rounded-lg shadow-sm mb-2' />
+      <p class='text-sm text-muted-foreground text-center'>Hot Summer</p>
+    </div>
+  </div>
+
+  <p><strong>2022 - Present</strong>:</p>
+  <p>Peking University, College of Engineering, Bachelor of Engineering in Robotics Engineering. GPA: 3.742/4.0 (Rank: 3rd in Major)</p>
+
+  <p><strong>2026 - </strong>:</p>
+  <p>Peking University, School of Advanced Manufacturing and Robotics, Master of Mechanical Engineering (Commencing September 2026)</p>
+
+  <p><strong>Core Courses</strong>:</p>
+  <p>Theoretical Mechanics, Advanced Dynamics, Introduction to Robotics, Principles of Automatic Control, Signals and Systems, Analog and Digital Electronics, Robotics Dynamics, Machine Learning, Fundamentals of Large Language Models</p>
+
+  {/* Research Projects */}
+  <h2 id='research'>Research Projects</h2>
+
+  <p><strong>2025 - Present: An Embodied AI Agent for Semantic Perception and Navigation</strong></p>
+  <p>
+    We develop a robotic embodied navigation agent and propose a hierarchical agent design. The agent perceives the robot's environment, acquires environmental semantic information, understands and assigns natural language navigation commands, and controls multiple robots to accomplish collaborative tasks.
+  </p>
+
+  <p><strong>2024 - Present: Semantic Navigation, Point Cloud Semantic Segmentation and Multi-Robot Collaboration</strong></p>
+  <p>
+    Engaged in semantic navigation technology research and point cloud semantic segmentation development. Explored multi-robot collaboration mechanisms for coordinated tasks.
+  </p>
+
+  <p><strong>2024 - 2025: SLAM of Wheeled Robots with Collaborative Robotic Arm Grasping</strong></p>
+  <ul>
+    <li>Implemented 2D map construction in indoor environments using LiDAR on a mobile robot platform</li>
+    <li>Utilized depth camera to generate spatial point clouds as physical obstacles for robotic arm grasping path planning</li>
+    <li>Achieved robot navigation based on the constructed map, integrating collaborative grasping with robotic arm</li>
+  </ul>
+
+  <div class='flex flex-col md:flex-row gap-4 my-4'>
+    <div class='flex-1'>
+      <Image src={autumnImg} alt='Autumn in PKU' class='rounded-lg shadow-sm mb-2' />
+      <p class='text-sm text-muted-foreground text-center'>Beautiful autumn days in Peking University campus</p>
+    </div>
+    <div class='flex-1'>
+      <Image src={winterImg} alt='Winter in PKU' class='rounded-lg shadow-sm mb-2' />
+      <p class='text-sm text-muted-foreground text-center'>And winter days</p>
+    </div>
+  </div>
+
+  {/* Academic Awards */}
+  <h2 id='awards'>Academic Awards</h2>
+  <ul>
+    <li><strong>2025</strong>: National Scholarship</li>
+    <li><strong>2025</strong>: Merit Student Pacesetter, Peking University</li>
+    <li><strong>2024</strong>: Third Prize of Peking University</li>
+    <li><strong>2024</strong>: Model Student of Academic Records, Peking University</li>
+    <li><strong>2023</strong>: Merit Student of Peking University</li>
+  </ul>
+
+  {/* Technical Skills */}
+  <h2 id='skills'>Technical Skills</h2>
+  <ul>
+    <li><strong>Programming Languages</strong>: C++, C Language, Python, MATLAB</li>
+    <li><strong>Engineering Software</strong>: AutoDesk Fusion, SolidWorks</li>
+    <li><strong>English Proficiency</strong>: National College English Test Band 6 (CET-6) Score: 555</li>
+    <li><strong>Research Areas</strong>: Embodied Intelligence, Vision-Language-Action Models, Multimodal Fusion, Multi-Robot Collaboration</li>
+  </ul>
+
+  {/* Research Interests */}
+  <h2 id='interests'>Research Interests</h2>
+  <p>
+    AI + Robotics, including Embodied Intelligence, Vision-Language-Action (VLA) Models, Multimodal Fusion, and Multi-Robot Collaboration.
+  </p>
+
+  <p class='mt-4'>
+    <a href='/cv/cv.pdf' target='_blank'>[PDF version is available! Click me!]</a>
+  </p>
+</PageLayout>

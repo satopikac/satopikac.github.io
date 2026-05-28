@@ -1,128 +1,99 @@
 ---
-import { Image } from 'astro:assets'
 import { Button, Collapse, Spoiler, Timeline } from 'astro-pure/user'
 import PageLayout from '@/layouts/CommonPage.astro'
 import Substats from '@/components/about/Substats.astro'
 import ToolSection from '@/components/about/ToolSection.astro'
 
-import aboutMe from '@/assets/about-me.png'
-import outdoorImg from '@/assets/about-outdoor.jpg'
-import springImg from '@/assets/about-spring.jpg'
-import summerImg from '@/assets/about-summer.jpg'
-import autumnImg from '@/assets/about-autumn.jpg'
-import winterImg from '@/assets/about-winter.jpg'
-
 const headings = [
-  { depth: 2, slug: 'education', text: '教育背景' },
-  { depth: 2, slug: 'research', text: '研究项目' },
-  { depth: 2, slug: 'awards', text: '学术荣誉' },
-  { depth: 2, slug: 'skills', text: '技术技能' },
-  { depth: 2, slug: 'interests', text: '研究兴趣' },
-  { depth: 2, slug: 'social-networks', text: '社交网络' },
-  { depth: 2, slug: 'about-blog', text: '关于博客' }
+  { depth: 2, slug: 'tools', text: 'Tools' },
+  { depth: 2, slug: 'social-networks', text: 'Social Networks' },
+  { depth: 2, slug: 'about-blog', text: 'About Blog' }
 ]
 ---
 
-<PageLayout title='关于' {headings} comment>
-  <div class='flex flex-col md:flex-row gap-6 items-start'>
-    <div class='flex-1'>
-      <p class='text-lg font-medium'>Mei Qingyu 梅庆宇</p>
-      <p>
-        北京大学工学院机器人工程专业的本科生，致力于完善具身智能、智能机器人技术并在工业应用领域发挥力量。即将入学北京大学先进制造与机器人学院攻读机械硕士。
-      </p>
-      <p>
-        Research in AI + Robotics, interests including Embodied Intelligence, Robot RL, Vision-Language-Action (VLA) Models, Multimodal Fusion, and Multi-Robot Collaboration.
-      </p>
-    </div>
-    <div class='w-48 flex-shrink-0'>
-      <Image src={aboutMe} alt='Mei Qingyu' class='rounded-lg shadow-md' />
-    </div>
-  </div>
-
-  {/* 教育背景 */}
-  <h2 id='education'>教育背景</h2>
-  <div class='flex flex-col md:flex-row gap-4'>
-    <div class='flex-1'>
-      <Image src={springImg} alt='Spring in PKU' class='rounded-lg shadow-sm mb-2' />
-      <p class='text-sm text-muted-foreground text-center'>Spring days in PKU</p>
-    </div>
-    <div class='flex-1'>
-      <Image src={summerImg} alt='Summer in PKU' class='rounded-lg shadow-sm mb-2' />
-      <p class='text-sm text-muted-foreground text-center'>Hot Summer</p>
-    </div>
-  </div>
-
+<PageLayout title='About' {headings} comment>
+  <h2 id='general-talk' class='invisible m-0 h-0'>General Talk</h2>
+  <p class='text-muted-foreground'>Robotics Engineer / AI Researcher</p>
+  <p>你好，我叫梅庆宇 (Mei Qingyu)，是北京大学工学院机器人工程专业的本科生。</p>
   <p>
-    <strong>2022 - Present</strong>: 北京大学工学院，机器人工程专业，工学学士。GPA: 3.742/4.0 (专业排名第3)
+    我致力于完善具身智能、智能机器人技术并在工业应用领域发挥力量。即将入学北京大学先进制造与机器人学院攻读机械工程硕士。
   </p>
-  <p>
-    <strong>2026 - </strong>: 北京大学先进制造与机器人学院，机械工程硕士（2026年9月入学）
-  </p>
-  <p>
-    <strong>核心课程</strong>: 理论力学、高等动力学、机器人学导论、自动控制原理、信号与系统、模拟与数字电子技术、机器人动力学、机器学习、大语言模型基础
-  </p>
+  <p>我的研究兴趣包括 Embodied Intelligence、Vision-Language-Action (VLA) Models、Multimodal Fusion 和 Multi-Robot Collaboration。</p>
+  <p>我喜欢阅读、音乐、电影和宝可梦。</p>
 
-  {/* 研究项目 */}
-  <h2 id='research'>研究项目</h2>
+  {/* tools */}
+  <h2 id='tools'>Tools</h2>
+  <p>以下是我正在使用的一些工具：</p>
+  <ToolSection
+    class='mb-5'
+    title='Productivity'
+    tools={[
+      {
+        name: 'Chrome',
+        description: 'Browser',
+        href: 'https://www.google.com/chrome/',
+        icon: import('@/assets/tools/chrome.svg?raw')
+      },
+      {
+        name: 'Firefox',
+        description: 'Browser',
+        href: 'https://www.mozilla.org/firefox/',
+        icon: import('@/assets/tools/firefox.svg?raw')
+      },
+      {
+        name: 'Notion',
+        description: 'Note Taking',
+        href: 'https://www.notion.so/',
+        icon: import('@/assets/tools/notion.svg?raw')
+      },
+      {
+        name: 'Typora',
+        description: 'Markdown Editor',
+        href: 'https://typora.io/',
+        icon: import('@/assets/tools/typora.svg?raw')
+      }
+    ]}
+  />
+  <ToolSection
+    class='mb-5'
+    title='Development'
+    tools={[
+      {
+        name: 'Cursor',
+        description: 'AI Code Editor',
+        href: 'https://www.cursor.com/',
+        icon: import('@/assets/tools/vscode.svg?raw')
+      },
+      {
+        name: 'VS Code',
+        description: 'IDE',
+        href: 'https://code.visualstudio.com/',
+        icon: import('@/assets/tools/vscode.svg?raw')
+      }
+    ]}
+  />
+  <ToolSection
+    class='mb-5'
+    title='Environment'
+    tools={[
+      {
+        name: 'Ubuntu 24.04 LTS',
+        description: 'Linux Distribution',
+        href: 'https://ubuntu.com/',
+        icon: import('@/assets/tools/ubuntu.svg?raw')
+      },
+      {
+        name: 'Windows 11',
+        description: 'Desktop',
+        href: 'https://www.microsoft.com/windows/',
+        icon: import('@/assets/tools/windows11.svg?raw')
+      }
+    ]}
+  />
 
-  <p><strong>2025 - Present: 具身智能语义感知与导航Agent</strong></p>
-  <p>
-    开发机器人具身导航Agent，提出分层Agent设计。Agent感知机器人环境，获取环境语义信息，理解并分配自然语言导航指令，控制多机器人完成协作任务。
-  </p>
-
-  <p><strong>2024 - Present: 语义导航、点云语义分割与多机器人协作</strong></p>
-  <p>
-    参与语义导航技术研究和点云语义分割开发，探索多机器人协作机制以实现协调任务。
-  </p>
-
-  <p><strong>2024 - 2025: 轮式机器人SLAM与协作机械臂抓取</strong></p>
-  <ul>
-    <li>在移动机器人平台上使用激光雷达实现室内2D地图构建</li>
-    <li>利用深度相机生成空间点云作为物理障碍物，用于机械臂抓取路径规划</li>
-    <li>基于构建的地图实现机器人导航，集成机械臂协作抓取</li>
-  </ul>
-
-  <div class='flex flex-col md:flex-row gap-4 my-4'>
-    <div class='flex-1'>
-      <Image src={autumnImg} alt='Autumn in PKU' class='rounded-lg shadow-sm mb-2' />
-      <p class='text-sm text-muted-foreground text-center'>Beautiful autumn days in Peking University campus</p>
-    </div>
-    <div class='flex-1'>
-      <Image src={winterImg} alt='Winter in PKU' class='rounded-lg shadow-sm mb-2' />
-      <p class='text-sm text-muted-foreground text-center'>And winter days</p>
-    </div>
-  </div>
-
-  {/* 学术荣誉 */}
-  <h2 id='awards'>学术荣誉</h2>
-  <ul>
-    <li><strong>2025</strong>: 国家奖学金 (National Scholarship)</li>
-    <li><strong>2025</strong>: 北京大学三好学生标兵 (Merit Student Pacesetter)</li>
-    <li><strong>2024</strong>: 北京大学三等奖学金</li>
-    <li><strong>2024</strong>: 北京大学学习优秀奖 (Model Student of Academic Records)</li>
-    <li><strong>2023</strong>: 北京大学三好学生 (Merit Student)</li>
-  </ul>
-
-  {/* 技术技能 */}
-  <h2 id='skills'>技术技能</h2>
-  <ul>
-    <li><strong>编程语言</strong>: C++, C, Python, MATLAB</li>
-    <li><strong>工程软件</strong>: AutoDesk Fusion, SolidWorks</li>
-    <li><strong>英语水平</strong>: CET-6 成绩: 555</li>
-    <li><strong>研究领域</strong>: 具身智能, 视觉-语言-动作模型, 多模态融合, 多机器人协作</li>
-  </ul>
-
-  {/* 研究兴趣 */}
-  <h2 id='interests'>研究兴趣</h2>
-  <p>
-    AI + Robotics，包括具身智能 (Embodied Intelligence)、视觉-语言-动作模型 (Vision-Language-Action Models)、多模态融合 (Multimodal Fusion) 和多机器人协作 (Multi-Robot Collaboration)。
-  </p>
-
-  {/* 社交网络 */}
-  <h2 id='social-networks'>社交网络</h2>
-  <p>
-    可以在以下平台找到我。
-  </p>
+  {/* social-networks */}
+  <h2 id='social-networks'>Social Networks</h2>
+  <p>你可以在以下平台找到我：</p>
   <Substats
     stats={[
       {
@@ -131,33 +102,30 @@ const headings = [
         link: 'https://github.com/satopikac',
         text: 'followers',
         api: 'github/satopikac'
-      }
-    ]}
-  />
-
-  {/* 关于博客 */}
-  <h2 id='about-blog'>关于博客</h2>
-  <div class='my-4'>
-    <Image src={outdoorImg} alt='生命不息，攀登不止' class='rounded-lg shadow-md w-full' />
-    <p class='text-sm text-muted-foreground text-center mt-2'>生命不息，攀登不止。摄于海淀三峰。</p>
-  </div>
-
-  <p>网站历史：</p>
-  <Timeline
-    events={[
+      },
       {
-        date: '2026-05-28',
-        content:
-          '使用 <a href="https://astro.build/" target="_blank">Astro</a> 和 <a href="https://github.com/cworld1/astro-theme-pure" target="_blank">Astro Theme Pure</a> 构建个人博客'
+        platform: 'Zhihu',
+        icon: 'zhihu',
+        color: '#0084ff',
+        link: 'https://www.zhihu.com/people/wmrbxv',
+        text: 'followers'
+      },
+      {
+        platform: 'Bilibili',
+        icon: 'bilibili',
+        color: '#fe7398',
+        link: 'https://space.bilibili.com/49978858',
+        text: 'followers'
       }
     ]}
   />
-  <p>
-    本站使用以下技术和资源：
-  </p>
+
+  {/* about-blog */}
+  <h2 id='about-blog'>About Blog</h2>
+  <p>本站基于以下项目/服务提供商的资源和技术支持：</p>
   <ul>
     <li>
-      框架与主题: <a href='https://astro.build/' target='_blank'>Astro</a> + <a
+      框架 & 主题: <a href='https://astro.build/' target='_blank'>Astro</a> + <a
         href='https://github.com/cworld1/astro-theme-pure'
         target='_blank'>Astro Theme Pure</a
       >
@@ -168,5 +136,6 @@ const headings = [
     <li>
       CI/CD: <a href='https://github.com/features/actions' target='_blank'>GitHub Actions</a>
     </li>
+    <li>评论系统：<a href='https://waline.js.org' target='_blank'>Waline</a></li>
   </ul>
 </PageLayout>
