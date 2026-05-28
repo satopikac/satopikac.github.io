@@ -11,9 +11,10 @@ import Section from '@/components/home/Section.astro'
 import SkillLayout from '@/components/home/SkillLayout.astro'
 import config from '@/site-config'
 
-const languages = ['C++', 'C', 'Python', 'MATLAB']
-const frontend = ['HTML', 'CSS', 'JavaScript']
+const programming = ['C++', 'C', 'Python', 'MATLAB']
 const robotics = ['ROS', 'SLAM', 'SolidWorks', 'AutoDesk Fusion']
+const webDev = ['HTML', 'CSS', 'JavaScript', 'Astro']
+const tools = ['Git', 'Linux', 'VS Code', 'LaTeX']
 
 const MAX_POSTS = 10
 const allPosts = await getBlogCollection()
@@ -41,9 +42,9 @@ if (!images[imagePath])
       />
 
       <div class='flex flex-col items-center gap-y-4'>
-        <h1 class='text-3xl font-medium'>{config.author}</h1>
+        <h1 class='text-3xl font-bold'>{config.author}</h1>
         <div class='flex flex-wrap justify-center gap-x-7 gap-y-3'>
-          <Label title='China'>
+          <Label title='China / Beijing'>
             <Icon name='location' class='size-5' slot='icon' />
           </Label>
           <Label
@@ -60,11 +61,15 @@ if (!images[imagePath])
 
     <div id='content' class='animate flex flex-col gap-y-10 md:w-4/5 lg:w-5/6'>
       <Section title='About'>
-        <p class='text-muted-foreground'>北京大学工学院 机器人工程专业本科生</p>
-        <p class='text-muted-foreground'>
-          致力于完善具身智能、智能机器人技术并在工业应用领域发挥力量。即将入学北京大学先进制造与机器人学院攻读机械硕士。
-        </p>
-        <Button title='更多关于我' class='w-fit self-end' href='/about' variant='ahead' />
+        <p class='text-muted-foreground mt-1'>Robotics Engineer / AI Researcher</p>
+        <div class='flex flex-col gap-2 leading-6 text-muted-foreground'>
+          <p>你好，我叫梅庆宇 (Mei Qingyu)，是北京大学工学院机器人工程专业的本科生。</p>
+          <p>
+            我致力于完善具身智能、智能机器人技术并在工业应用领域发挥力量。研究兴趣包括 Embodied Intelligence、Vision-Language-Action (VLA) Models、Multimodal Fusion 和 Multi-Robot Collaboration。
+          </p>
+          <p>即将入学北京大学先进制造与机器人学院攻读机械工程硕士。</p>
+        </div>
+        <Button title='More about me' class='w-fit self-end' href='/about' variant='ahead' />
       </Section>
       {
         allPostsByDate.length > 0 && (
@@ -81,35 +86,6 @@ if (!images[imagePath])
         )
       }
 
-      {
-        /* <Section title='Experience'>
-      <Card
-        heading='Lorem Ipsum'
-        subheading='Sit amet consectetur'
-        date='Dec 2022 - Nov 2023'
-        imagePath='/src/assets/about-astro.png'
-        altText='Lorem, ipsum dolor sit'
-        imageClass='h-12 w-auto md:-start-16'
-      >
-        <ul class='ms-4 list-disc text-muted-foreground'>
-          <li>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore debitis recusandae, ut
-            molestiae laboriosam pariatur!
-
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li>
-          </li>
-        </ul>
-      </Card>
-      <Card
-        heading='Lorem Ipsum'
-        subheading='Sit amet consectetur'
-        date='Dec 2022 - Nov 2023'
-        imagePath='/src/assets/about-astro.png'
-        altText='Lorem, ipsum dolor sit'
-        imageClass='h-12 w-auto md:-start-16'
-      />
-    </Section> */
-      }
       <Section title='Education'>
         <Card
           as='a'
@@ -130,21 +106,21 @@ if (!images[imagePath])
       <Section title='Research'>
         <Card
           as='a'
-          heading='具身智能导航Agent'
+          heading='具身智能语义感知与导航Agent'
           subheading='语义感知与导航，多机器人协作'
           date='2025 - Present'
           href='https://github.com/satopikac'
         />
         <Card
           as='a'
-          heading='语义导航与点云分割'
+          heading='语义导航与点云语义分割'
           subheading='语义导航技术研究与点云语义分割开发'
           date='2024 - Present'
           href='https://github.com/satopikac'
         />
         <Card
           as='a'
-          heading='轮式机器人SLAM与机械臂协作抓取'
+          heading='轮式机器人SLAM与协作机械臂抓取'
           subheading='室内2D地图构建与机械臂路径规划'
           date='2024 - 2025'
           href='https://github.com/satopikac'
@@ -152,9 +128,10 @@ if (!images[imagePath])
       </Section>
 
       <Section title='Skills'>
-        <SkillLayout title='编程语言' skills={languages} />
-        <SkillLayout title='Web开发' skills={frontend} />
+        <SkillLayout title='编程语言' skills={programming} />
         <SkillLayout title='机器人与工程' skills={robotics} />
+        <SkillLayout title='Web开发' skills={webDev} />
+        <SkillLayout title='工具' skills={tools} />
       </Section>
     </div>
     <Quote class='mt-12' />
