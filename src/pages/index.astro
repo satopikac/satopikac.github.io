@@ -11,9 +11,9 @@ import Section from '@/components/home/Section.astro'
 import SkillLayout from '@/components/home/SkillLayout.astro'
 import config from '@/site-config'
 
-const languages = ['Html', 'JavaScript', 'CSS', 'Shell']
-const frontend = ['TypeScript', 'Vite', 'Webpack', 'Astro']
-const backend = ['Node.js', 'Vercel']
+const languages = ['C++', 'C', 'Python', 'MATLAB']
+const frontend = ['HTML', 'CSS', 'JavaScript']
+const robotics = ['ROS', 'SLAM', 'SolidWorks', 'AutoDesk Fusion']
 
 const MAX_POSTS = 10
 const allPosts = await getBlogCollection()
@@ -60,9 +60,9 @@ if (!images[imagePath])
 
     <div id='content' class='animate flex flex-col gap-y-10 md:w-4/5 lg:w-5/6'>
       <Section title='About'>
-        <p class='text-muted-foreground'>Developer / Designer</p>
+        <p class='text-muted-foreground'>北京大学工学院 机器人工程专业本科生</p>
         <p class='text-muted-foreground'>
-          遇到你真是太好了。欢迎来到我的个人主页。
+          致力于完善具身智能、智能机器人技术并在工业应用领域发挥力量。即将入学北京大学先进制造与机器人学院攻读机械硕士。
         </p>
         <Button title='更多关于我' class='w-fit self-end' href='/about' variant='ahead' />
       </Section>
@@ -113,34 +113,48 @@ if (!images[imagePath])
       <Section title='Education'>
         <Card
           as='a'
-          heading='Education'
-          subheading='Your education background here'
-          date='2021 - 2025'
+          heading='北京大学 工学院'
+          subheading='机器人工程 · GPA: 3.742/4.0 (Rank: 3rd)'
+          date='2022 - Present'
+          href='https://www.coe.pku.edu.cn/'
+        />
+        <Card
+          as='a'
+          heading='北京大学 先进制造与机器人学院'
+          subheading='机械工程硕士 (2026年入学)'
+          date='2026 - '
+          href='https://amr.pku.edu.cn/'
+        />
+      </Section>
+
+      <Section title='Research'>
+        <Card
+          as='a'
+          heading='具身智能导航Agent'
+          subheading='语义感知与导航，多机器人协作'
+          date='2025 - Present'
+          href='https://github.com/satopikac'
+        />
+        <Card
+          as='a'
+          heading='语义导航与点云分割'
+          subheading='语义导航技术研究与点云语义分割开发'
+          date='2024 - Present'
+          href='https://github.com/satopikac'
+        />
+        <Card
+          as='a'
+          heading='轮式机器人SLAM与机械臂协作抓取'
+          subheading='室内2D地图构建与机械臂路径规划'
+          date='2024 - 2025'
           href='https://github.com/satopikac'
         />
       </Section>
 
-      <Section title='Website List'>
-        <div class='grid grid-cols-1 gap-3 sm:grid-cols-2'>
-          <ProjectCard
-            href='https://github.com/satopikac'
-            heading='My Projects'
-            subheading='Check out my projects on GitHub'
-            imagePath='/src/assets/projects/1.avif'
-          />
-          <ProjectCard
-            href='/projects'
-            heading='More projects'
-            subheading='Check out more projects'
-            imagePath='/src/assets/projects/4.avif'
-          />
-        </div>
-      </Section>
-
       <Section title='Skills'>
-        <SkillLayout title='Languages' skills={languages} />
-        <SkillLayout title='Frontend' skills={frontend} />
-        <SkillLayout title='Backend' skills={backend} />
+        <SkillLayout title='编程语言' skills={languages} />
+        <SkillLayout title='Web开发' skills={frontend} />
+        <SkillLayout title='机器人与工程' skills={robotics} />
       </Section>
     </div>
     <Quote class='mt-12' />
