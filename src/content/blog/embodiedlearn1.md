@@ -7,7 +7,7 @@ tags:
 language: '中文'
 ---
 
-## 课程说明
+![1780906780201](image/embodiedlearn1/1780906780201.png)
 
 课程资源
 
