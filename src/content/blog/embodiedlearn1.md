@@ -2,19 +2,16 @@
 title: Robot Learning 2026 – Lecture 1-Introduction
 publishDate: 2026-06-01
 description: '开一个新坑，记录具身学习的关键问题'
+heroImage: { src: 'image/embodiedlearn1/1780908400681.png', color: '#48B29E' }
 tags:
   - AI
 language: '中文'
 ---
-
-![1780906780201](image/embodiedlearn1/1780906780201.png)
-
-课程资源
+![1780908400681](image/embodiedlearn1/1780908400681.png)
 
 - 课程网站: [Robot learning](http://cvg.ethz.ch/lectures/Robot-Learning/)
 - 课程作业网站: [mees-robot-learning-course/ethz-course-2026](https://github.com/mees-robot-learning-course/ethz-course-2026)
 - 课程视频: [Youtube](https://www.youtube.com/watch?v=X0k14u6pSxw)
-
 
 ## 机器人学习基础
 

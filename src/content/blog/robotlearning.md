@@ -2,6 +2,7 @@
 title: Lecture 2- Robot Control & Markov Decision Processes Notes
 publishDate: 2026-06-08
 description: '开一个新坑，记录具身学习的关键问题'
+heroImage: { src: './image/robotlearning/1780908552752.png', color: '#48B29E' }
 tags:
   - AI
 language: '中文'
@@ -9,6 +10,8 @@ language: '中文'
 ## Part 1: Robot Control
 
 ### 1.1 核心问题
+
+![1780908552752](image/robotlearning/1780908552752.png)
 
 不同形态的机器人（四足、灵巧手、无人机等）共享一个根本约束：**将高层目标转化为特定形态所需的电机力矩**。要构建通用的机器人基础模型，必须理解适用于所有机器人的控制框架。
 

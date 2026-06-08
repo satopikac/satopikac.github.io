@@ -2,6 +2,7 @@
 title: Lecture 2&3-Robot Control, MDP and Imitation Learning
 publishDate: 2026-06-08
 description: '机器人控制、MDP 与模仿学习：从底层动作到策略学习'
+heroImage: { src: './image/embodiedlearn1/1780906780201.png', color: '#48B29E' }
 tags:
   - AI
 language: '中文'
@@ -14,6 +15,8 @@ language: '中文'
 - 课程作业网站: [mees-robot-learning-course/ethz-course-2026](https://github.com/mees-robot-learning-course/ethz-course-2026)
 
 本文合并整理 Lecture 2 和 Lecture 3。原始字幕中关于作业截止时间、Moodle 论坛、课程展示安排、论文讨论切换等课程管理内容没有纳入笔记，只保留与机器人控制、Markov decision processes 和 imitation learning 直接相关的部分。
+
+![1780906780201](image/embodiedlearn1/1780906780201.png)
 
 ## 从机器人控制到策略学习
 
