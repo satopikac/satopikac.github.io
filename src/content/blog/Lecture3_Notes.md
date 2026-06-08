@@ -2,7 +2,7 @@
 title: "Lecture 3 — Imitation Learning Notes"
 publishDate: 2026-06-08
 description: '模仿学习：从行为克隆到隐变量规划，处理分布偏移与多模态行为'
-heroImage: { src: './image/robotlearning/1780908552752.png', color: '#48B29E' }
+heroImage: { src: './image/embodiedlearn1/1780906780201.png', color: '#48B29E' }
 tags:
   - AI
   - Robot Learning
