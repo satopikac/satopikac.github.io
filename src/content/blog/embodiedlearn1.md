@@ -1,5 +1,5 @@
 ---
-title: Robot Learning 2026 – Lecture 1-Introduction to Robot Learning | ETH Zürich （课程笔记）
+title: Robot Learning 2026 – Lecture 1-Introduction
 publishDate: 2026-06-01
 description: '开一个新坑，记录具身学习的关键问题'
 tags:
