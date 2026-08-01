@@ -5,6 +5,7 @@ import Substats from '@/components/about/Substats.astro'
 import ToolSection from '@/components/about/ToolSection.astro'
 
 const headings = [
+  { depth: 2, slug: 'course-notes', text: 'Course Notes' },
   { depth: 2, slug: 'tools', text: 'Tools' },
   { depth: 2, slug: 'social-networks', text: 'Social Networks' },
   { depth: 2, slug: 'about-blog', text: 'About Blog' }
@@ -18,8 +19,33 @@ const headings = [
   <p>
     我致力于完善具身智能、智能机器人技术并在工业应用领域发挥力量。即将入学北京大学先进制造与机器人学院攻读机械工程硕士。
   </p>
-  <p>我的研究兴趣包括 Embodied Intelligence、Vision-Language-Action (VLA) Models、Multimodal Fusion 和 Multi-Robot Collaboration。</p>
+  <p>
+    目前在微软亚洲研究院 Spatial Intelligence Group 担任研究实习生，方向是视觉-语言-动作（VLA）模型与长程具身操作 Agent。
+    本科毕业设计《具身智能语义感知与导航 Agent》获北京大学工学院优秀本科毕业论文。
+  </p>
+  <p>我的研究兴趣包括 Embodied Intelligence、Vision-Language-Action (VLA) Models、World Models、Multimodal Fusion 和 Multi-Robot Collaboration。</p>
   <p>我喜欢阅读、音乐、电影和宝可梦。</p>
+
+  {/* course notes */}
+  <h2 id='course-notes'>Course Notes</h2>
+  <p>自学公开课时整理的中文学习文档，已部署为在线站点：</p>
+  <ul>
+    <li>
+      <a href='https://qy.mei.0506078.xyz/cs285/' target='_blank'>CS285</a> · Deep Reinforcement Learning（深度强化学习）
+    </li>
+    <li>
+      <a href='https://qy.mei.0506078.xyz/cs336/' target='_blank'>CS336</a> · Language Modeling from Scratch（从零构建语言模型）
+    </li>
+    <li>
+      <a href='https://qy.mei.0506078.xyz/cs61a/' target='_blank'>CS61A</a> · Structure and Interpretation of Computer Programs
+    </li>
+    <li>
+      <a href='https://qy.mei.0506078.xyz/diffusion/' target='_blank'>MIT 6.S184</a> · Flow Matching and Diffusion Models
+    </li>
+    <li>
+      <a href='https://qy.mei.0506078.xyz/rlhf/' target='_blank'>RLHF Book</a> · 基于人类反馈的强化学习与大模型后训练
+    </li>
+  </ul>
 
   {/* tools */}
   <h2 id='tools'>Tools</h2>
@@ -44,7 +70,7 @@ const headings = [
         name: 'Obsidian',
         description: 'Note Taking',
         href: 'https://obsidian.md/',
-        icon: import('@/assets/tools/vscode.svg?raw')
+        icon: import('@/assets/tools/obsidian.svg?raw')
       },
       {
         name: 'Typora',
@@ -61,8 +87,8 @@ const headings = [
       {
         name: 'Claude Code',
         description: 'AI Code Assistant',
-        href: 'https://claude.ai/',
-        icon: import('@/assets/tools/chatgpt.svg?raw')
+        href: 'https://claude.com/claude-code',
+        icon: import('@/assets/tools/claude.svg?raw')
       },
       {
         name: 'VS Code',

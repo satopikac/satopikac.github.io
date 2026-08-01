@@ -12,6 +12,7 @@ import winterImg from '@/assets/about-winter.jpg'
 const headings = [
   { depth: 2, slug: 'education', text: 'Education' },
   { depth: 2, slug: 'research', text: 'Research Projects' },
+  { depth: 2, slug: 'internship', text: 'Internship Experience' },
   { depth: 2, slug: 'awards', text: 'Academic Awards' },
   { depth: 2, slug: 'skills', text: 'Technical Skills' },
   { depth: 2, slug: 'interests', text: 'Research Interests' }
@@ -21,12 +22,13 @@ const headings = [
 <PageLayout title='CV' {headings}>
   <div class='flex flex-col md:flex-row gap-6 items-start'>
     <div class='flex-1'>
-      <p class='text-lg font-medium'>Satopikac</p>
+      <p class='text-lg font-medium'>Qingyu Mei (Satopikac)</p>
       <p>
         College of Engineering, Peking University<br />
-        Robotics Engineering<br />
+        Robotics Engineering &middot; Beijing, China<br />
         GitHub: <a href='https://github.com/satopikac' target='_blank'>satopikac</a><br />
-        Email: <a href='mailto:link@0506078.xyz'>link@0506078.xyz</a>
+        Email: <a href='mailto:link@0506078.xyz'>link@0506078.xyz</a> /
+        <a href='mailto:qymei1898@gmail.com'>qymei1898@gmail.com</a>
       </p>
       <p>
         Research in AI + Robotics, interests including Embodied Intelligence, Robot RL, Vision-Language-Action (VLA) Models, Multimodal Fusion, and Multi-Robot Collaboration, dedicated to advancing intelligent robotics technology and applications.
@@ -50,33 +52,64 @@ const headings = [
     </div>
   </div>
 
-  <p><strong>2022 - Present</strong>:</p>
-  <p>Peking University, College of Engineering, Bachelor of Engineering in Robotics Engineering. GPA: 3.742/4.0 (Rank: 3rd in Major)</p>
+  <p><strong>Sept. 2022 - July 2026</strong>:</p>
+  <p>Peking University, College of Engineering, B.S.E. in Robotics Engineering with Honors. GPA: 3.735/4.0 (88/100), Rank: 3rd in Major</p>
 
   <p><strong>2026 - </strong>:</p>
   <p>Peking University, School of Advanced Manufacturing and Robotics, Master of Mechanical Engineering (Commencing September 2026)</p>
 
   <p><strong>Core Courses</strong>:</p>
-  <p>Theoretical Mechanics, Advanced Dynamics, Introduction to Robotics, Principles of Automatic Control, Signals and Systems, Analog and Digital Electronics, Robotics Dynamics, Machine Learning, Fundamentals of Large Language Models</p>
+  <p>Theoretical Mechanics, Advanced Dynamics, Introduction to Robotics, Principles of Automatic Control, Signals and Systems, Analog and Digital Electronics, Robotics Dynamics, Machine Learning and Deep Learning, Fundamentals of Large Language Models, Computer Science, Embodied AI</p>
 
   {/* Research Projects */}
   <h2 id='research'>Research Projects</h2>
 
-  <p><strong>2025 - Present: An Embodied AI Agent for Semantic Perception and Navigation</strong></p>
+  <p><strong>2025 - 2026: An Embodied AI Agent for Semantic Perception and Navigation</strong></p>
+  <p><em>Project Developer &middot; Peking University &middot; Advisor: Prof. Meng Guo</em></p>
   <p>
     We develop a robotic embodied navigation agent and propose a hierarchical agent design. The agent perceives the robot's environment, acquires environmental semantic information, understands and assigns natural language navigation commands, and controls multiple robots to accomplish collaborative tasks.
   </p>
+  <ul>
+    <li>Selected as an Outstanding Undergraduate Thesis by the College of Engineering, Peking University</li>
+  </ul>
 
   <p><strong>2024 - Present: Semantic Navigation, Point Cloud Semantic Segmentation and Multi-Robot Collaboration</strong></p>
   <p>
     Engaged in semantic navigation technology research and point cloud semantic segmentation development. Explored multi-robot collaboration mechanisms for coordinated tasks.
   </p>
 
-  <p><strong>2024 - 2025: SLAM of Wheeled Robots with Collaborative Robotic Arm Grasping</strong></p>
+  <p>
+    <strong>2024 - 2025: Multi-Robot Collaborative Autonomous Exploration, Mapping and Navigation with Robotic-Arm Grasping</strong>
+  </p>
+  <p><em>Project Participant &middot; Peking University</em></p>
   <ul>
     <li>Implemented 2D map construction in indoor environments using LiDAR on a mobile robot platform</li>
+    <li>Participated in multi-robot experiments on collaborative autonomous exploration and real-time 2D mapping in indoor environments using LiDAR-equipped mobile robots</li>
     <li>Utilized depth camera to generate spatial point clouds as physical obstacles for robotic arm grasping path planning</li>
     <li>Achieved robot navigation based on the constructed map, integrating collaborative grasping with robotic arm</li>
+    <li>Carried out map-based autonomous navigation with coordinated path planning across multiple mobile robots</li>
+    <li>Validated coordinated exploration, navigation, and grasping performance in both indoor and simulated environments</li>
+  </ul>
+
+  <p><strong>2025 - 2026: MiniMind Open-Source Small Language Model</strong></p>
+  <p><em>Project Developer</em></p>
+  <ul>
+    <li>Implemented the model architecture and core training components for pretraining, supervised fine-tuning, and LoRA fine-tuning</li>
+    <li>Built the tokenizer and text-processing pipeline for preparing and encoding training data</li>
+    <li>Integrated the components into an initial functional small language model capable of text generation</li>
+  </ul>
+
+  {/* Internship */}
+  <h2 id='internship'>Internship Experience</h2>
+
+  <p><strong>July 2026 - Present: Microsoft Research Asia, Spatial Intelligence Group</strong></p>
+  <p><em>Research Intern &middot; Beijing, China &middot; Mentor: Lin Luo</em></p>
+  <ul>
+    <li>Collected teleoperation data for vision-language-action models</li>
+    <li>Deployed and fine-tuned vision-language-action models and ran inference for robotic manipulation</li>
+    <li>
+      Developed, deployed, and tested an embodied manipulation agent that plans a long-horizon task into a sequence of atomic tasks, automatically judges the execution outcome of each atomic task, and triggers a retry or a jump to another subtask, improving the success rate of long-horizon task execution
+    </li>
   </ul>
 
   <div class='flex flex-col md:flex-row gap-4 my-4'>
@@ -93,19 +126,30 @@ const headings = [
   {/* Academic Awards */}
   <h2 id='awards'>Academic Awards</h2>
   <ul>
-    <li><strong>2025</strong>: National Scholarship</li>
-    <li><strong>2025</strong>: Merit Student Pacesetter, Peking University</li>
+    <li>
+      <strong>2025</strong>: National Scholarship <em>(Ministry of Education of the People's Republic of China)</em>
+    </li>
+    <li><strong>2025</strong>: Pacemaker to Merit Student, Peking University</li>
     <li><strong>2024</strong>: Third Prize of Peking University</li>
     <li><strong>2024</strong>: Model Student of Academic Records, Peking University</li>
     <li><strong>2023</strong>: Merit Student of Peking University</li>
+    <li>
+      <strong>2023</strong>: Schlumberger Scholarship, First Class, College of Engineering, Peking University
+    </li>
   </ul>
 
   {/* Technical Skills */}
   <h2 id='skills'>Technical Skills</h2>
   <ul>
-    <li><strong>Programming Languages</strong>: C++, C Language, Python, MATLAB</li>
-    <li><strong>Engineering Software</strong>: AutoDesk Fusion, SolidWorks</li>
-    <li><strong>English Proficiency</strong>: National College English Test Band 6 (CET-6) Score: 555</li>
+    <li><strong>Programming Languages</strong>: C++, C Language, Python, PyTorch, MATLAB</li>
+    <li><strong>Engineering Software</strong>: AutoDesk Fusion, SolidWorks, Mechanical Design</li>
+    <li><strong>Robotics Stack</strong>: Linux and ROS, IsaacLab</li>
+    <li>
+      <strong>Research</strong>: Robotics Dynamics, Automatic Control, Embodied AI, Machine Learning, Vision-Language-Action Models
+    </li>
+    <li>
+      <strong>Languages</strong>: Chinese (Native); English &mdash; National College English Test Band 6 (CET-6) Score: 555, IELTS in preparation
+    </li>
     <li><strong>Research Areas</strong>: Embodied Intelligence, Vision-Language-Action Models, Multimodal Fusion, Multi-Robot Collaboration</li>
   </ul>
 
@@ -113,6 +157,9 @@ const headings = [
   <h2 id='interests'>Research Interests</h2>
   <p>
     AI + Robotics, including Embodied Intelligence, Vision-Language-Action (VLA) Models, World Models,etc.
+  </p>
+  <p>
+    I am interested in building intelligent agents that can perceive, reason about, and interact with the physical world, and in developing algorithms that enable humanoid robots, mobile robots, and robotic manipulators to autonomously perform complex, long-horizon tasks.
   </p>
 
   <!-- <p class='mt-4'>

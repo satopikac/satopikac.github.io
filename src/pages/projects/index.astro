@@ -7,6 +7,8 @@ import ProjectSection from '@/components/projects/ProjectSection.astro'
 
 const headings = [
   { depth: 2, slug: 'programs', text: 'Programs' },
+  { depth: 2, slug: 'course-notes', text: 'Course Notes' },
+  { depth: 2, slug: 'coursework', text: 'Coursework' },
   { depth: 2, slug: 'activities', text: 'Activities' }
 ]
 ---
@@ -23,53 +25,165 @@ const headings = [
   </p>
 
   <h2 id='programs'>Programs</h2>
+  <p>机器人与具身智能相关的研究、课程与开源项目。</p>
   <ProjectSection
     projects={[
       {
-        name: 'SemanticMapGotcha',
-        description: 'Semantic map related project for robot navigation',
-        links: [
-          { type: 'github', href: 'https://github.com/satopikac/SemanticMapGotcha' }
-        ]
+        name: 'AgentForSemNav',
+        description:
+          '本科毕业设计：分层式具身智能语义导航 Agent，开放词表感知 → 物体级语义地图与场景图 → LLM 任务规划 → 多机器人协同执行。',
+        links: [{ type: 'github', href: 'https://github.com/satopikac/AgentForSemNav' }]
       },
       {
-        name: 'AgentForSemNav',
-        description: 'Agent for semantic navigation',
-        links: [
-          { type: 'github', href: 'https://github.com/satopikac/AgentForSemNav' }
-        ]
+        name: 'SemanticMapGotcha',
+        description: '面向机器人导航的物体级语义地图构建，将开放词表检测与分割结果融合进可查询的地图表示。',
+        links: [{ type: 'github', href: 'https://github.com/satopikac/SemanticMapGotcha' }]
       },
       {
         name: 'robot_nav_system',
-        description: 'Robot navigation system',
-        links: [
-          { type: 'github', href: 'https://github.com/satopikac/robot_nav_system' }
-        ]
+        description: '移动机器人导航系统：基于激光雷达的室内 2D 建图、路径规划与 move_base 执行链路。',
+        links: [{ type: 'github', href: 'https://github.com/satopikac/robot_nav_system' }]
+      },
+      {
+        name: 'pointcloud_semantic_seg',
+        description: '点云语义分割 demo，将 2D 分割结果投影回深度相机点云，生成带语义标签的空间点云。',
+        links: [{ type: 'github', href: 'https://github.com/satopikac/pointcloud_semantic_seg' }]
+      },
+      {
+        name: 'every-embodied',
+        description:
+          '仅需 Python 基础，从 0 构建自己的具身智能机器人；从 0 逐步构建 VLA / OpenVLA / SmolVLA / Pi0，深入理解具身智能。',
+        links: [{ type: 'github', href: 'https://github.com/satopikac/every-embodied' }]
       },
       {
         name: 'graduation_project',
-        description: 'Graduation project repository',
-        links: [
-          { type: 'github', href: 'https://github.com/satopikac/graduation_project' }
-        ]
+        description: '毕业设计相关代码与实验记录，包含仿真与实体机器人（AgileX SCOUT MINI）上的验证流程。',
+        links: [{ type: 'github', href: 'https://github.com/satopikac/graduation_project' }]
       },
       {
         name: 'ROS_project',
-        description: 'ROS related projects',
-        links: [
-          { type: 'github', href: 'https://github.com/satopikac/ROS_project' }
-        ]
+        description: 'ROS 学习与实践项目合集，涵盖建图、导航、机械臂控制等常用功能包的使用与二次开发。',
+        links: [{ type: 'github', href: 'https://github.com/satopikac/ROS_project' }]
       },
       {
         name: 'GroupIntelli-Code',
-        description: 'Group intelligence code',
+        description: '群体智能课程与研究相关代码。',
+        links: [{ type: 'github', href: 'https://github.com/satopikac/GroupIntelli-Code' }]
+      },
+      {
+        name: 'LLM_Who_is_Undercover',
+        description: '用大语言模型扮演「谁是卧底」中的多个角色，观察多智能体在不完全信息博弈下的推理与欺骗行为。',
+        links: [{ type: 'github', href: 'https://github.com/satopikac/LLM_Who_is_Undercover' }]
+      },
+      {
+        name: 'Cooperation in Scale-Free Network',
+        description: 'A simulation program in cooperation evolution in scale-free network and regular network.',
         links: [
-          { type: 'github', href: 'https://github.com/satopikac/GroupIntelli-Code' }
+          {
+            type: 'github',
+            href: 'https://github.com/satopikac/Cooperation-In-Scale-Free-Network-and-Regular-Network'
+          }
         ]
       }
     ]}
   />
 
+  <h2 id='course-notes'>Course Notes</h2>
+  <p>
+    自学公开课时整理的中文学习文档，均已部署为可在线阅读的站点，欢迎取阅、指正。
+  </p>
+  <ProjectSection
+    projects={[
+      {
+        name: 'CS285 · Deep Reinforcement Learning',
+        description: 'UC Berkeley CS285 深度强化学习课程的中文学习文档，覆盖策略梯度、Actor-Critic、模型基方法与离线 RL。',
+        links: [
+          { type: 'site', href: 'https://qy.mei.0506078.xyz/cs285/' },
+          { type: 'github', href: 'https://github.com/satopikac/cs285' }
+        ]
+      },
+      {
+        name: 'CS336 · Language Modeling from Scratch',
+        description: 'Stanford CS336 从零构建语言模型的中文学习文档，涵盖分词、Transformer 实现、训练系统与数据工程。',
+        links: [
+          { type: 'site', href: 'https://qy.mei.0506078.xyz/cs336/' },
+          { type: 'github', href: 'https://github.com/satopikac/cs336' }
+        ]
+      },
+      {
+        name: 'CS61A · Structure and Interpretation of Computer Programs',
+        description: 'UC Berkeley CS61A 学习笔记，从函数抽象、数据抽象到解释器实现的中文整理。',
+        links: [
+          { type: 'site', href: 'https://qy.mei.0506078.xyz/cs61a/' },
+          { type: 'github', href: 'https://github.com/satopikac/cs61a' }
+        ]
+      },
+      {
+        name: 'MIT 6.S184 · Flow Matching and Diffusion Models',
+        description: 'MIT 6.S184 流匹配与扩散模型课程的中文学习文档，从随机微分方程到条件生成的推导与实现。',
+        links: [
+          { type: 'site', href: 'https://qy.mei.0506078.xyz/diffusion/' },
+          { type: 'github', href: 'https://github.com/satopikac/diffusion' }
+        ]
+      },
+      {
+        name: 'RLHF Book · 大模型后训练',
+        description: '《RLHF Book》中文精读文档，围绕基于人类反馈的强化学习，梳理奖励建模、PPO/DPO 及后训练实践。',
+        links: [
+          { type: 'site', href: 'https://qy.mei.0506078.xyz/rlhf/' },
+          { type: 'github', href: 'https://github.com/satopikac/rlhf' }
+        ]
+      }
+    ]}
+  />
+
+  <h2 id='coursework'>Coursework</h2>
+  <p>课程作业与练习实现。</p>
+  <ProjectSection
+    projects={[
+      {
+        name: 'cs336hw',
+        description: 'Stanford CS336 课程作业实现：分词器、Transformer 语言模型与训练流程。',
+        links: [{ type: 'github', href: 'https://github.com/satopikac/cs336hw' }]
+      },
+      {
+        name: 'signals-and-systems',
+        description: '24 Spring 信号与系统课程作业（MATLAB）。',
+        links: [{ type: 'github', href: 'https://github.com/satopikac/signals-and-systems' }]
+      },
+      {
+        name: 'complex-network-py',
+        description: '复杂网络相关的 Python 实验代码。',
+        links: [{ type: 'github', href: 'https://github.com/satopikac/complex-network-py' }]
+      },
+      {
+        name: 'boardcrafts',
+        description: 'A repo for learning singlechip（单片机学习记录）。',
+        links: [{ type: 'github', href: 'https://github.com/satopikac/boardcrafts' }]
+      }
+    ]}
+  />
+
   <h2 id='activities'>Activities</h2>
-  <p>Visit my <a href='https://github.com/satopikac' target='_blank'>GitHub profile</a> to see all my projects and contributions.</p>
+  <ul>
+    <li>
+      <strong>Research Intern</strong> · 微软亚洲研究院 Spatial Intelligence Group（2026.07 - ），
+      从事视觉-语言-动作（VLA）模型与长程具身操作 Agent 的研究。
+    </li>
+    <li>
+      <strong>Undergraduate Thesis</strong> · 具身智能语义感知与导航 Agent，
+      获北京大学工学院优秀本科毕业论文。
+    </li>
+    <li>
+      <strong>Course Notes</strong> · 持续整理公开课中文学习文档，见上方 <a href='#course-notes'
+        >Course Notes</a
+      >。
+    </li>
+    <li>
+      <strong>Writing</strong> · 在 <a href='/blog'>Blog</a> 记录具身智能、机器人学习与大模型相关的读书笔记。
+    </li>
+  </ul>
+  <p>
+    更多项目与提交记录见 <a href='https://github.com/satopikac' target='_blank'>GitHub profile</a>。
+  </p>
 </PageLayout>
