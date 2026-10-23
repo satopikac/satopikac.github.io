@@ -25,7 +25,9 @@ jobs:
         uses: oven-sh/setup-bun@v2
 
       - name: Install dependencies
-        run: bun install
+        run: |
+          bun install --cwd packages/pure --frozen-lockfile
+          bun install --frozen-lockfile
 
       - name: Build with Astro
         run: bun run build
