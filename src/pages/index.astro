@@ -79,6 +79,16 @@ if (!images[imagePath])
         </div>
         <Button title='More about me' class='w-fit self-end' href='/about' variant='ahead' />
       </Section>
+      <Section title='GitHub'>
+        <Card
+          as='a'
+          heading='GitHub 项目展示 ↗'
+          subheading='精选开源项目、学习笔记与实用工具，按兴趣探索我的 GitHub。'
+          href='/github'
+        >
+          <p class='text-sm text-muted-foreground'>本展示页由 Codex 协助设计与实现。</p>
+        </Card>
+      </Section>
       {
         allPostsByDate.length > 0 && (
           <Section title='Posts'>
